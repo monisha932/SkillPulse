@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MICRO-CREDENTIAL CURRICULUM GENERATION PLATFORM DRIVEN BY REAL-TIME GLOBAL JOB MARKET SKILL DEMANDS</title>
+  <meta name="description"
+    content="MICRO-CREDENTIAL CURRICULUM GENERATION PLATFORM DRIVEN BY REAL-TIME GLOBAL JOB MARKET SKILL DEMANDS">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/assessment.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+
+<body>
+
+  <!-- App Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-left">
+      <button id="btn-sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle navigation" title="Toggle Navigation Menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <a href="#" class="brand" onclick="App.goToStep(9); return false;">
+        <div class="brand-icon">🎓</div>
+        <div class="brand-info">
+          <h1>SKILLPULSE</h1>
+          <p>MICRO-CREDENTIAL CURRICULUM GENERATION PLATFORM DRIVEN BY REAL-TIME GLOBAL JOB MARKET SKILL DEMANDS</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="nav-center">
+      <div class="status-badge">
+        <span class="status-pulse"></span>
+        <span>FastAPI Engine Online</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <div id="user-profile-widget" class="user-profile-tag" style="display: none;">
+        <div class="user-avatar" id="nav-user-avatar">S</div>
+        <span id="nav-user-name" style="font-weight: 600;">Student</span>
+        <button id="btn-logout" class="btn-remove-skill" style="font-size: 0.9rem; margin-left: 0.3rem;"
+          title="Sign out">↪</button>
+      </div>
+      <button id="btn-auth-open" class="btn btn-secondary btn-sm" onclick="Auth.openModal()">Sign In</button>
+    </div>
+  </header>
+
+  <!-- Application Shell Layout with Sidebar -->
+  <div class="app-layout">
+    <!-- Backdrop Overlay for Mobile Drawer -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <!-- Modern Sidebar Navigation -->
+    <aside class="app-sidebar" id="app-sidebar" aria-label="Sidebar Navigation">
+      <div class="sidebar-top">
+        <div class="sidebar-header-title">PLATFORM NAVIGATION</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button type="button" class="sidebar-nav-item" data-step="9" title="Dashboard">
+          <span class="sidebar-icon">📊</span>
+          <span class="sidebar-label">Dashboard</span>
+        </button>
+        <button type="button" class="sidebar-nav-item active" data-step="1" title="Career Profile">
+          <span class="sidebar-icon">👤</span>
+          <span class="sidebar-label">Career Profile</span>
+        </button>
+        <button type="button" class="sidebar-nav-item" data-step="2" title="Skill Assessment">
+          <span class="sidebar-icon">⏱️</span>
+          <span class="sidebar-label">Skill Assessment</span>
+        </button>
+        <button type="button" class="sidebar-nav-item" data-step="3" title="Verified Skills">
+          <span class="sidebar-icon">🏅</span>
+          <span class="sidebar-label">Verified Skills</span>
+        </button>
+        <button type="button" class="sidebar-nav-item" data-step="4" title="Job Market">
+          <span class="sidebar-icon">🌐</span>
+          <span class="sidebar-label">Job Market</span>
+        </button>
+        <button type="button" class="sidebar-nav-item" data-step="5" title="Skill Gap">
+          <span class="sidebar-icon">⚖️</span>
+          <span class="sidebar-label">Skill Gap</span>
+        </button>
+        <button type="button" class="sidebar-nav-item" data-step="6" title="My Curriculum">
+          <span class="sidebar-icon">📚</span>
+          <span class="sidebar-label">My Curriculum</span>
+        </button>
+        <button type="button" class="sidebar-nav-item" data-step="7" title="Micro-Credentials">
+          <span class="sidebar-icon">📜</span>
+          <span class="sidebar-label">Micro-Credentials</span>
+        </button>
+        <button type="button" class="sidebar-nav-item" data-step="8" title="Learning Progress">
+          <span class="sidebar-icon">🚀</span>
+          <span class="sidebar-label">Learning Progress</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-sync-badge">
+          <span class="sync-dot"></span>
+          <div class="sync-info">
+            <span class="sync-heading">Real-Time Market Data</span>
+            <span class="sync-sub">Synced & Verified</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Workspace Container (Stepper + Main Views) -->
+    <div class="app-workspace">
+      <!-- Stepper Breadcrumb Component -->
+      <div class="stepper-container">
+    <nav class="workflow-stepper" aria-label="Project Workflow">
+      <div class="step-item active" data-step="1">
+        <div class="step-num">1</div>
+        <div class="step-label">Career Profile & Skills</div>
+      </div>
+      <div class="step-divider"></div>
+
+      <div class="step-item" data-step="2">
+        <div class="step-num">2</div>
+        <div class="step-label">Timed Assessment</div>
+      </div>
+      <div class="step-divider"></div>
+
+      <div class="step-item" data-step="3">
+        <div class="step-num">3</div>
+        <div class="step-label">Verified Skill Profile</div>
+      </div>
+      <div class="step-divider"></div>
+
+      <div class="step-item" data-step="4">
+        <div class="step-num">4</div>
+        <div class="step-label">Job Market Skill Demand</div>
+      </div>
+      <div class="step-divider"></div>
+
+      <div class="step-item" data-step="5">
+        <div class="step-num">5</div>
+        <div class="step-label">Skill Gap Analysis</div>
+      </div>
+      <div class="step-divider"></div>
+
+      <div class="step-item" data-step="6">
+        <div class="step-num">6</div>
+        <div class="step-label">Micro-Credential Curriculum</div>
+      </div>
+      <div class="step-divider"></div>
+
+      <div class="step-item" data-step="7">
+        <div class="step-num">7</div>
+        <div class="step-label">My Credentials</div>
+      </div>
+      <div class="step-divider"></div>
+
+      <div class="step-item" data-step="8">
+        <div class="step-num">8</div>
+        <div class="step-label">Adaptive Learning Path</div>
+      </div>
+      <div class="step-divider"></div>
+
+      <div class="step-item" data-step="9">
+        <div class="step-num">9</div>
+        <div class="step-label">Job Readiness Dashboard</div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Main View Container -->
+  <main class="main-content">
+
+    <!-- VIEW 1: Career Profile & Self-Declared Technical Skills -->
+    <section class="app-view" data-view="1">
+
+      <!-- Top Banner Card -->
+      <div class="glass-card"
+        style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8));">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <span class="badge badge-primary" style="margin-bottom: 0.6rem;">Workflow Steps 1 – 3</span>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: #ffffff;">
+              Career Profile & Self-Declared Technical Skills
+            </h2>
+            <p style="color: var(--text-muted); max-width: 780px; margin-top: 0.35rem; font-size: 0.95rem;">
+              Select your target engineering role to benchmark against real-time global job market demands.
+              Declare your baseline technical proficiencies, which will be verified through our proctored 90-minute
+              timed assessment.
+            </p>
+          </div>
+          <button id="btn-save-profile" class="btn btn-primary btn-lg">
+            💾 Save Career Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Section 1: Target Role Selection -->
+      <div class="glass-card">
+        <div class="card-header">
+          <div>
+            <h2>🎯 Select Your Target Job Role</h2>
+            <p>Benchmarked dynamically against live industry postings and skill importance weights</p>
+          </div>
+          <span class="badge badge-primary">Step 2: Career Goal</span>
+        </div>
+
+        <!-- Role Grid Rendered by JS -->
+        <div class="role-grid" id="role-selection-grid">
+          <!-- Populated dynamically via Profile.fetchRoles() -->
+          <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: var(--text-muted);">
+            Connecting to FastAPI market engine...
+          </div>
+        </div>
+
+        <!-- Candidate Background Form -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="profile-experience">Current Experience Level</label>
+            <select class="form-select" id="profile-experience">
+              <option value="Fresher" selected>Fresher / Final-Year Student</option>
+              <option value="Entry-Level (0-1 yrs)">Entry-Level (0-1 Years)</option>
+              <option value="Junior Engineer (1-2 yrs)">Junior Engineer (1-2 Years)</option>
+              <option value="Mid-Level (3+ yrs)">Mid-Level (3+ Years)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="profile-education">Degree & Major</label>
+            <input type="text" class="form-input" id="profile-education" value="B.E. Computer Science & Engineering"
+              placeholder="e.g., B.Tech / B.E. Information Technology">
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Self-Declared Technical Skills -->
+      <div class="glass-card">
+        <div class="card-header">
+          <div>
+            <h2>⚡ Self-Declared Technical Skills</h2>
+            <p>Declare the technologies, languages, and frameworks you currently know. Set your self-rated proficiency.
+            </p>
+          </div>
+          <span id="declared-skills-count" class="badge badge-success">3 Skills Declared</span>
+        </div>
+
+        <!-- Preset Chips Tray -->
+        <p style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.3rem;">
+          Popular Engineering Skills (Click to Add):
+        </p>
+        <div class="preset-skills-tray">
+          <button type="button" class="preset-chip" data-skill="Python"><span>+</span> Python</button>
+          <button type="button" class="preset-chip" data-skill="JavaScript"><span>+</span> JavaScript</button>
+          <button type="button" class="preset-chip" data-skill="SQL"><span>+</span> SQL</button>
+          <button type="button" class="preset-chip" data-skill="Algorithms"><span>+</span> Algorithms & Data
+            Structures</button>
+          <button type="button" class="preset-chip" data-skill="Web Development"><span>+</span> Web Development &
+            APIs</button>
+          <button type="button" class="preset-chip" data-skill="DevOps"><span>+</span> Docker & DevOps</button>
+          <button type="button" class="preset-chip" data-skill="Cloud"><span>+</span> Cloud Architecture</button>
+          <button type="button" class="preset-chip" data-skill="Machine Learning"><span>+</span> Machine
+            Learning</button>
+          <button type="button" class="preset-chip" data-skill="System Design"><span>+</span> System Design</button>
+        </div>
+
+        <!-- Custom Skill Input -->
+        <div class="custom-skill-input-group">
+          <input type="text" id="input-custom-skill" class="form-input"
+            placeholder="Type a custom technical skill (e.g. React, Redis, Kubernetes, PyTorch)...">
+          <button type="button" id="btn-add-custom-skill" class="btn btn-secondary">
+            + Add Skill
+          </button>
+        </div>
+
+        <!-- Interactive Skills Deck -->
+        <div id="declared-skills-deck" class="declared-skills-deck">
+          <!-- Populated by Profile.renderDeclaredSkills() -->
+        </div>
+
+        <!-- Bottom Action CTA -->
+        <div
+          style="margin-top: 2.5rem; display: flex; justify-content: flex-end; gap: 1rem; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">
+            Ready to verify your proficiencies against the 50 MCQs & 2 coding challenges?
+          </span>
+          <button id="btn-proceed-assessment" class="btn btn-primary btn-lg">
+            Proceed to Timed Assessment (90m) ➔
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- VIEW 2: Timed Assessment & Integrity Controls (Workflow Steps 4 - 8) -->
+    <section class="app-view" data-view="2" style="display: none;">
+      <div class="assessment-wrapper">
+
+        <!-- Assessment Sticky Top Bar -->
+        <div class="assessment-topbar">
+          <div class="assessment-meta">
+            <!-- 90-Minute Countdown Clock -->
+            <div class="timer-box" id="timer-box-container">
+              <span>⏱️</span>
+              <span id="assessment-timer">01:30:00</span>
+            </div>
+
+            <!-- Anti-Cheating Integrity Monitor -->
+            <div id="integrity-badge" class="integrity-indicator clean">
+              <span>🛡️</span>
+              <span>Integrity: Clean (100%)</span>
+            </div>
+
+            <div id="assessment-skill-badge" class="badge badge-primary" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">
+              Skill: Python
+            </div>
+          </div>
+
+          <div class="assessment-topbar-actions">
+            <div class="progress-pill">
+              Answered: <b id="assessment-progress-count">0 / 52</b>
+            </div>
+            <button type="button" class="btn btn-primary btn-submit-assessment" onclick="Assessment.submitAssessment()">
+              Submit Assessment ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- 2-Column Assessment Body -->
+        <div class="assessment-grid">
+
+          <!-- Left Column: Question Navigator Matrix -->
+          <aside class="question-nav-card">
+            <div class="nav-matrix-header">
+              <span style="font-weight: 700; font-size: 0.95rem; color: #ffffff;">Question Matrix</span>
+              <span class="badge badge-primary">52 Total</span>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="nav-filter-tabs">
+              <button type="button" class="nav-tab-btn active" data-filter="all"
+                onclick="Assessment.setFilter('all')">All</button>
+              <button type="button" class="nav-tab-btn" data-filter="mcq" onclick="Assessment.setFilter('mcq')">MCQs
+                (50)</button>
+              <button type="button" class="nav-tab-btn" data-filter="coding"
+                onclick="Assessment.setFilter('coding')">Coding (2)</button>
+              <button type="button" class="nav-tab-btn" data-filter="flagged"
+                onclick="Assessment.setFilter('flagged')">★ Flagged</button>
+            </div>
+
+            <!-- 52 Questions Grid -->
+            <div id="question-matrix-grid" class="question-matrix">
+              <!-- Populated dynamically by Assessment.renderQuestionMatrix() -->
+            </div>
+
+            <div
+              style="margin-top: 1.25rem; font-size: 0.72rem; color: var(--text-dim); display: flex; flex-direction: column; gap: 0.35rem; border-top: 1px solid var(--border-subtle); padding-top: 0.85rem;">
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <span
+                  style="width: 10px; height: 10px; background: rgba(16, 185, 129, 0.5); border-radius: 2px;"></span>
+                Answered
+                <span
+                  style="width: 10px; height: 10px; background: rgba(56, 189, 248, 0.5); border-radius: 2px; margin-left: 0.5rem;"></span>
+                Current
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <span
+                  style="width: 10px; height: 10px; background: rgba(139, 92, 246, 0.5); border-radius: 2px;"></span>
+                Coding Challenge
+                <span
+                  style="width: 10px; height: 10px; background: #f59e0b; border-radius: 50%; margin-left: 0.5rem;"></span>
+                Flagged
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Column: Current Question & Options / IDE -->
+          <div class="question-detail-card" id="question-detail-container">
+            <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
+              Loading assessment questions...
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIEW 3: Verified Skill Profile (Workflow Step 9) -->
+    <section class="app-view" data-view="3" style="display: none;">
+      <div id="verified-profile-container">
+        <!-- Rendered dynamically by Assessment.renderVerifiedSkillProfile() -->
+        <div class="glass-card" style="text-align: center; padding: 3rem;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏅</div>
+          <h3>Awaiting Assessment Completion</h3>
+          <p style="color: var(--text-muted); margin-top: 0.35rem;">
+            Please take and complete your 90-minute assessment to generate your Verified Skill Profile.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: Job Market Skill Demand Analyzer (Module 4) -->
+    <section class="app-view" data-view="4" style="display: none;">
+      <div id="market-demand-container">
+        <!-- Populated dynamically by MarketDemand.renderDashboard() -->
+        <div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
+          <div class="spinner" style="width: 44px; height: 44px; margin: 0 auto 1.25rem; border-width: 3px;"></div>
+          <h3 style="color: #ffffff; margin-bottom: 0.5rem; font-family: var(--font-heading);">
+            Initializing Job Market Skill Demand Analyzer...
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">
+            Querying authentic job postings, calculating frequency vectors and demand percentages.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 5: Skill Gap Analysis (Module 5) -->
+    <section class="app-view" data-view="5" style="display: none;">
+      <div id="gap-analysis-container">
+        <!-- Populated dynamically by GapAnalysis.renderDashboard() -->
+        <div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
+          <div class="spinner" style="width: 44px; height: 44px; margin: 0 auto 1.25rem; border-width: 3px;"></div>
+          <h3 style="color: #ffffff; margin-bottom: 0.5rem; font-family: var(--font-heading);">
+            Initializing Skill Gap Analysis Engine...
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">
+            Benchmarking verified competencies with required job market skills.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 6: Personalized Micro-Credential Curriculum (Module 6) -->
+    <section class="app-view" data-view="6" style="display: none;">
+      <div id="curriculum-container"></div>
+    </section>
+
+    <!-- VIEW 7: My Credentials Dashboard (Module 7: Micro-Credential Generation) -->
+    <section class="app-view" data-view="7" style="display: none;">
+      <div id="credentials-container"></div>
+    </section>
+
+    <!-- VIEW 8: Adaptive Learning Path & Reassessment (Module 8) -->
+    <section class="app-view" data-view="8" style="display: none;">
+      <div id="adaptive-container">
+        <!-- Populated dynamically by Adaptive.renderDashboard() -->
+      </div>
+    </section>
+
+    <!-- VIEW 9: Job Readiness Dashboard / Career Skill Profile (Module 9) -->
+    <section class="app-view" data-view="9" style="display: none;">
+      <div id="readiness-dashboard-container">
+        <!-- Populated dynamically by Readiness.renderDashboard() -->
+      </div>
+    </section>
+
+  </main>
+    </div> <!-- .app-workspace -->
+  </div> <!-- .app-layout -->
+
+  <!-- AUTHENTICATION MODAL -->
+  <div class="modal-backdrop" id="auth-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Candidate Authentication</h3>
+        <p>Access your personalized micro-credential curriculum portal</p>
+      </div>
+
+      <!-- Quick Demo Login Button -->
+      <div style="margin-bottom: 1.5rem;">
+        <button type="button" id="btn-demo-login" class="btn btn-demo" style="width: 100%; padding: 0.85rem;">
+          ⚡ One-Click Student Login (Monisha & Pooja)
+        </button>
+        <div style="text-align: center; margin: 0.85rem 0; color: var(--text-dim); font-size: 0.8rem;">
+          ── or sign in with credentials ──
+        </div>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab active" data-mode="login">Sign In</button>
+        <button type="button" class="auth-tab" data-mode="register">Register</button>
+      </div>
+
+      <!-- Auth Form -->
+      <form id="auth-form">
+        <div class="form-group" id="group-register-name" style="display: none; margin-bottom: 1rem;">
+          <label class="form-label" for="auth-name">Full Name</label>
+          <input type="text" id="auth-name" class="form-input" placeholder="e.g. Monisha G / Pooja S">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="auth-email">Email Address</label>
+          <input type="email" id="auth-email" class="form-input" required placeholder="student@example.com"
+            value="student@example.com">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label" for="auth-password">Password</label>
+          <input type="password" id="auth-password" class="form-input" required placeholder="••••••••"
+            value="password123">
+        </div>
+
+        <button type="submit" id="btn-auth-submit" class="btn btn-primary" style="width: 100%;">
+          Sign In to Platform
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ASSESSMENT RULES & INTEGRITY MODAL -->
+  <div class="modal-backdrop" id="assessment-rules-modal">
+    <div class="modal-content" style="max-width: 600px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span style="font-size: 1.5rem;">🛡️</span>
+          <h3>Assessment & Integrity Controls</h3>
+        </div>
+        <p>Please review the automated verification guidelines before launching your test</p>
+      </div>
+
+      <div class="rules-list">
+        <div class="rule-item">
+          <span class="icon">⏱️</span>
+          <div><b>90-Minute Countdown:</b> The assessment is strictly timed. Unanswered questions will auto-submit when
+            the timer reaches 00:00.</div>
+        </div>
+        <div class="rule-item">
+          <span class="icon">📝</span>
+          <div><b>Structure:</b> Exactly <b>50 Technical MCQs</b> covering 5 domains + <b>2 Programming Challenges</b>
+            with automated test suites.</div>
+        </div>
+        <div class="rule-item">
+          <span class="icon">🚫</span>
+          <div><b>Integrity Control:</b> Copy, paste, and text selection are disabled during the assessment.</div>
+        </div>
+        <div class="rule-item">
+          <span class="icon">👁️</span>
+          <div><b>Tab Switch Detection:</b> Browser window blur and tab switching events are actively logged and tracked
+            in your integrity score.</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+        <label for="select-assessment-skill" style="display: block; font-weight: 700; font-size: 0.85rem; color: #ffffff; margin-bottom: 0.5rem;">
+          Select Technical Skill to Assess & Verify:
+        </label>
+        <select id="select-assessment-skill" class="form-input" style="width: 100%; background: #0f172a; border-color: var(--primary); color: #ffffff; padding: 0.6rem;">
+          <option value="Python">Python (50 MCQs + 2 Programming Challenges)</option>
+          <option value="SQL">SQL (50 MCQs + 2 Query Challenges)</option>
+          <option value="Java">Java (50 MCQs + 2 Programming Challenges)</option>
+        </select>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.75rem;">
+        <button type="button" id="btn-close-rules" class="btn btn-secondary">Cancel</button>
+        <button type="button" id="btn-launch-test" class="btn btn-primary">I Agree & Launch Test ➔</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE LEARNING WORKSPACE MODAL -->
+  <div class="modal-backdrop" id="module-workspace-modal">
+    <div class="modal-content" style="max-width: 900px; max-height: 90vh; display: flex; flex-direction: column;">
+      <div class="modal-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 1rem; margin-bottom: 0;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; flex-wrap: wrap;" id="workspace-modal-badges">
+              <!-- Dynamically populated badges -->
+            </div>
+            <h2 id="workspace-modal-title" style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800; color: #ffffff; margin: 0;">
+              Module Learning Workspace
+            </h2>
+            <p id="workspace-modal-subtitle" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Interactive competency bridging workspace
+            </p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="Curriculum.closeModuleWorkspace()">✕</button>
+        </div>
+      </div>
+      <div id="workspace-modal-body" style="overflow-y: auto; padding: 1.25rem 0; flex: 1;">
+        <!-- Dynamically populated workspace tabs and content -->
+      </div>
+      <div class="modal-footer" style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;" id="workspace-modal-footer">
+        <!-- Dynamically populated action buttons -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CREDENTIAL CERTIFICATE VIEW MODAL (Module 7) -->
+  <div class="modal-backdrop" id="credential-certificate-modal">
+    <div class="modal-content" style="max-width: 780px; max-height: 90vh; overflow-y: auto;" id="credential-certificate-content">
+      <!-- Populated dynamically via Credentials.openCredentialModal() -->
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/auth.js"></script>
+  <script src="/static/js/profile.js"></script>
+  <script src="/static/js/integrity.js"></script>
+  <script src="/static/js/assessment.js"></script>
+  <script src="/static/js/market_demand.js"></script>
+  <script src="/static/js/gap_analysis.js"></script>
+  <script src="/static/js/curriculum.js"></script>
+  <script src="/static/js/credentials.js"></script>
+  <script src="/static/js/adaptive.js"></script>
+  <script src="/static/js/readiness.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+
+</html>

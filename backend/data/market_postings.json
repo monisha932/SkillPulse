@@ -1,0 +1,600 @@
+{
+  "total_roles": 4,
+  "roles": [
+    {
+      "role_id": "fullstack-dev",
+      "role_title": "Full-Stack Web Developer",
+      "domain": "Web & Software Engineering",
+      "market_demand_index": 94,
+      "demand_status": "Surging",
+      "average_salary_usd": "$115,000",
+      "description": "Designs, builds, and maintains robust end-to-end web applications, integrating responsive frontends with scalable APIs and relational/NoSQL backends.",
+      "required_skills": [
+        {
+          "name": "JavaScript",
+          "importance_weight": 0.95,
+          "trend": "surging",
+          "min_proficiency": "Advanced",
+          "category": "Frontend / Language"
+        },
+        {
+          "name": "React",
+          "importance_weight": 0.92,
+          "trend": "surging",
+          "min_proficiency": "Intermediate",
+          "category": "Frontend Framework"
+        },
+        {
+          "name": "Java",
+          "importance_weight": 0.90,
+          "trend": "high",
+          "min_proficiency": "Advanced",
+          "category": "Backend / Language"
+        },
+        {
+          "name": "SQL",
+          "importance_weight": 0.88,
+          "trend": "surging",
+          "min_proficiency": "Intermediate",
+          "category": "Database"
+        },
+        {
+          "name": "Git",
+          "importance_weight": 0.85,
+          "trend": "surging",
+          "min_proficiency": "Intermediate",
+          "category": "Version Control & DevOps"
+        },
+        {
+          "name": "REST API",
+          "importance_weight": 0.85,
+          "trend": "high",
+          "min_proficiency": "Intermediate",
+          "category": "Web Architecture"
+        },
+        {
+          "name": "HTML/CSS",
+          "importance_weight": 0.80,
+          "trend": "stable",
+          "min_proficiency": "Intermediate",
+          "category": "Web Standards"
+        },
+        {
+          "name": "Python",
+          "importance_weight": 0.75,
+          "trend": "rising",
+          "min_proficiency": "Intermediate",
+          "category": "Backend / Scripting"
+        }
+      ],
+      "micro_credentials": [
+        {
+          "code": "MC-FS-01",
+          "title": "Modern Full-Stack API Architecture & Security",
+          "target_skill": "Web Development",
+          "estimated_hours": 16,
+          "badge_icon": "server",
+          "learning_outcomes": [
+            "Design RESTful and asynchronous API endpoints adhering to OpenAPI specifications",
+            "Implement secure JWT authentication, CORS policies, and rate limiting",
+            "Build integration pipelines between frontend SPAs and backend persistence layers"
+          ],
+          "modules": [
+            {
+              "title": "REST Principles & Asynchronous Endpoints",
+              "hours": 4
+            },
+            {
+              "title": "API Authentication, JWTs & CORS Security",
+              "hours": 4
+            },
+            {
+              "title": "Database ORM Modeling & Migrations",
+              "hours": 4
+            },
+            {
+              "title": "Hands-on Capstone: Secure Microservice API",
+              "hours": 4
+            }
+          ]
+        },
+        {
+          "code": "MC-FS-02",
+          "title": "Relational Data Modeling & High-Performance SQL",
+          "target_skill": "SQL",
+          "estimated_hours": 14,
+          "badge_icon": "database",
+          "learning_outcomes": [
+            "Construct normalized multi-table database schemas conforming to 3NF",
+            "Optimize complex queries using B-tree indexing and explain plans",
+            "Implement ACID transactions with safe concurrency isolation levels"
+          ],
+          "modules": [
+            {
+              "title": "Relational Schema Design & 3NF Normalization",
+              "hours": 3
+            },
+            {
+              "title": "Advanced Joins, Subqueries & Window Functions",
+              "hours": 4
+            },
+            {
+              "title": "Query Profiling, B-Trees & Index Optimization",
+              "hours": 4
+            },
+            {
+              "title": "Hands-on Lab: High-Throughput E-Commerce Schema",
+              "hours": 3
+            }
+          ]
+        },
+        {
+          "code": "MC-FS-03",
+          "title": "Containerized CI/CD & Cloud Application Deployment",
+          "target_skill": "DevOps",
+          "estimated_hours": 18,
+          "badge_icon": "cloud-upload",
+          "learning_outcomes": [
+            "Package complex multi-container web apps using Docker and Docker Compose",
+            "Automate testing and deployment pipelines with GitHub Actions",
+            "Configure reverse proxies (Nginx) with SSL/TLS termination"
+          ],
+          "modules": [
+            {
+              "title": "Docker Fundamentals & Multi-Stage Builds",
+              "hours": 4
+            },
+            {
+              "title": "Automated Testing & GitHub Actions CI/CD",
+              "hours": 5
+            },
+            {
+              "title": "Reverse Proxies, Nginx & SSL Configuration",
+              "hours": 4
+            },
+            {
+              "title": "Hands-on Capstone: Production Cloud Deployment",
+              "hours": 5
+            }
+          ]
+        }
+      ],
+      "sample_postings": [
+        "Seeking Full-Stack Engineer with strong Python and JavaScript experience. Must have proficiency in building RESTful APIs, SQL query optimization, Docker containerization, and modern frontend styling.",
+        "Looking for Web Developer proficient in relational database design, asynchronous web architectures, problem solving in data structures, and CI/CD automated deployment."
+      ]
+    },
+    {
+      "role_id": "ai-ml-engineer",
+      "role_title": "AI & Machine Learning Engineer",
+      "domain": "Artificial Intelligence & Data Science",
+      "market_demand_index": 98,
+      "demand_status": "Critical",
+      "average_salary_usd": "$138,000",
+      "description": "Develops, trains, and operationalizes state-of-the-art machine learning models, NLP pipelines, and deep neural architectures for intelligent automation.",
+      "required_skills": [
+        {
+          "name": "Python",
+          "importance_weight": 0.98,
+          "trend": "rising",
+          "min_proficiency": "Expert",
+          "category": "Language"
+        },
+        {
+          "name": "Algorithms",
+          "importance_weight": 0.94,
+          "trend": "rising",
+          "min_proficiency": "Proficient",
+          "category": "Core CS"
+        },
+        {
+          "name": "Problem Solving",
+          "importance_weight": 0.92,
+          "trend": "rising",
+          "min_proficiency": "Proficient",
+          "category": "Core CS"
+        },
+        {
+          "name": "SQL",
+          "importance_weight": 0.85,
+          "trend": "stable",
+          "min_proficiency": "Competent",
+          "category": "Data"
+        },
+        {
+          "name": "Cloud",
+          "importance_weight": 0.84,
+          "trend": "rising",
+          "min_proficiency": "Competent",
+          "category": "MLOps"
+        },
+        {
+          "name": "DevOps",
+          "importance_weight": 0.8,
+          "trend": "rising",
+          "min_proficiency": "Competent",
+          "category": "MLOps"
+        },
+        {
+          "name": "Web Development",
+          "importance_weight": 0.7,
+          "trend": "stable",
+          "min_proficiency": "Novice",
+          "category": "Serving"
+        }
+      ],
+      "micro_credentials": [
+        {
+          "code": "MC-AI-01",
+          "title": "Applied Machine Learning & Vector Embeddings",
+          "target_skill": "Python",
+          "estimated_hours": 20,
+          "badge_icon": "cpu",
+          "learning_outcomes": [
+            "Implement feature engineering and matrix operations using NumPy and Pandas",
+            "Train supervised and unsupervised models with scikit-learn",
+            "Generate and query vector embeddings for semantic search systems"
+          ],
+          "modules": [
+            {
+              "title": "High-Performance Data Structures & Vectorization",
+              "hours": 5
+            },
+            {
+              "title": "Supervised Learning Algorithms & Cross-Validation",
+              "hours": 5
+            },
+            {
+              "title": "NLP Preprocessing & TF-IDF / Embeddings",
+              "hours": 5
+            },
+            {
+              "title": "Hands-on Capstone: Semantic Recommendation Engine",
+              "hours": 5
+            }
+          ]
+        },
+        {
+          "code": "MC-AI-02",
+          "title": "Scalable ML Model Serving & MLOps Pipelines",
+          "target_skill": "Cloud",
+          "estimated_hours": 16,
+          "badge_icon": "activity",
+          "learning_outcomes": [
+            "Wrap machine learning inference models in low-latency FastAPI endpoints",
+            "Deploy containerized inference services to cloud infrastructure",
+            "Monitor model drift, latency metrics, and throughput"
+          ],
+          "modules": [
+            {
+              "title": "Model Serialization & FastAPI Serving",
+              "hours": 4
+            },
+            {
+              "title": "Dockerizing Deep Learning Runtime Environments",
+              "hours": 4
+            },
+            {
+              "title": "Cloud Deployment & GPU Acceleration Concepts",
+              "hours": 4
+            },
+            {
+              "title": "Hands-on Capstone: Production Inference Pipeline",
+              "hours": 4
+            }
+          ]
+        }
+      ],
+      "sample_postings": [
+        "We are hiring an AI/ML Engineer skilled in Python, algorithms, mathematical problem solving, data preprocessing, model evaluation, and building inference APIs.",
+        "Seeking Machine Learning specialist with hands-on expertise in vector embeddings, algorithmic efficiency, SQL data extraction, and MLOps deployment pipelines."
+      ]
+    },
+    {
+      "role_id": "cloud-devops-eng",
+      "role_title": "Cloud & DevOps Infrastructure Engineer",
+      "domain": "Cloud Computing & Systems",
+      "market_demand_index": 92,
+      "demand_status": "Surging",
+      "average_salary_usd": "$125,000",
+      "description": "Architects resilient cloud architectures, manages Kubernetes container orchestration, and automates high-throughput continuous delivery pipelines.",
+      "required_skills": [
+        {
+          "name": "DevOps",
+          "importance_weight": 0.96,
+          "trend": "rising",
+          "min_proficiency": "Expert",
+          "category": "Core"
+        },
+        {
+          "name": "Cloud",
+          "importance_weight": 0.95,
+          "trend": "rising",
+          "min_proficiency": "Proficient",
+          "category": "Infrastructure"
+        },
+        {
+          "name": "System Design",
+          "importance_weight": 0.9,
+          "trend": "rising",
+          "min_proficiency": "Proficient",
+          "category": "Architecture"
+        },
+        {
+          "name": "Python",
+          "importance_weight": 0.85,
+          "trend": "stable",
+          "min_proficiency": "Competent",
+          "category": "Scripting"
+        },
+        {
+          "name": "Web Development",
+          "importance_weight": 0.72,
+          "trend": "stable",
+          "min_proficiency": "Novice",
+          "category": "Networking"
+        },
+        {
+          "name": "SQL",
+          "importance_weight": 0.75,
+          "trend": "stable",
+          "min_proficiency": "Competent",
+          "category": "Storage"
+        },
+        {
+          "name": "Algorithms",
+          "importance_weight": 0.76,
+          "trend": "stable",
+          "min_proficiency": "Competent",
+          "category": "Core CS"
+        },
+        {
+          "name": "Problem Solving",
+          "importance_weight": 0.84,
+          "trend": "stable",
+          "min_proficiency": "Competent",
+          "category": "Core CS"
+        }
+      ],
+      "micro_credentials": [
+        {
+          "code": "MC-DO-01",
+          "title": "Kubernetes Orchestration & Resilient Microservices",
+          "target_skill": "DevOps",
+          "estimated_hours": 18,
+          "badge_icon": "layers",
+          "learning_outcomes": [
+            "Author Kubernetes Pods, Deployments, and Ingress controllers",
+            "Implement horizontal pod autoscaling and self-healing mechanisms",
+            "Design circuit breaker patterns for fault-tolerant microservice networking"
+          ],
+          "modules": [
+            {
+              "title": "Container Orchestration & Architecture",
+              "hours": 4
+            },
+            {
+              "title": "Kubernetes Deployments, Services & Ingress",
+              "hours": 5
+            },
+            {
+              "title": "Resilience Patterns: Circuit Breakers & Retries",
+              "hours": 4
+            },
+            {
+              "title": "Hands-on Capstone: Multi-Service Cluster Deployment",
+              "hours": 5
+            }
+          ]
+        },
+        {
+          "code": "MC-DO-02",
+          "title": "Declarative Infrastructure as Code with Terraform",
+          "target_skill": "Cloud",
+          "estimated_hours": 15,
+          "badge_icon": "shield",
+          "learning_outcomes": [
+            "Provision virtual networks, subnets, and compute instances declaratively",
+            "Manage state files and remote backend locks securely",
+            "Implement automated security scanning and IAM least-privilege policies"
+          ],
+          "modules": [
+            {
+              "title": "IaC Principles & HCL Syntax",
+              "hours": 4
+            },
+            {
+              "title": "VPC, Security Groups & Compute Provisioning",
+              "hours": 4
+            },
+            {
+              "title": "State Management & Module Reusability",
+              "hours": 3
+            },
+            {
+              "title": "Hands-on Capstone: Automated Cloud Environment",
+              "hours": 4
+            }
+          ]
+        }
+      ],
+      "sample_postings": [
+        "DevOps Engineer needed to drive CI/CD automation, Docker containerization, Kubernetes cluster management, reverse proxies, and Python infrastructure automation.",
+        "Urgent opening for Cloud Infrastructure Engineer. Candidates must possess deep skills in system design, high availability, cloud security, and scripting."
+      ]
+    },
+    {
+      "role_id": "data-engineer",
+      "role_title": "Big Data & Data Platform Engineer",
+      "domain": "Data Engineering & Analytics",
+      "market_demand_index": 90,
+      "demand_status": "High",
+      "average_salary_usd": "$120,000",
+      "description": "Constructs robust, scalable ETL/ELT pipelines, distributed data warehouses, and streaming infrastructures for enterprise data consumption.",
+      "required_skills": [
+        {
+          "name": "SQL",
+          "importance_weight": 0.98,
+          "trend": "rising",
+          "min_proficiency": "Expert",
+          "category": "Core"
+        },
+        {
+          "name": "Python",
+          "importance_weight": 0.92,
+          "trend": "rising",
+          "min_proficiency": "Proficient",
+          "category": "Language"
+        },
+        {
+          "name": "Algorithms",
+          "importance_weight": 0.88,
+          "trend": "stable",
+          "min_proficiency": "Proficient",
+          "category": "Core CS"
+        },
+        {
+          "name": "Cloud",
+          "importance_weight": 0.86,
+          "trend": "rising",
+          "min_proficiency": "Competent",
+          "category": "Storage"
+        },
+        {
+          "name": "DevOps",
+          "importance_weight": 0.78,
+          "trend": "stable",
+          "min_proficiency": "Competent",
+          "category": "Pipelines"
+        },
+        {
+          "name": "Problem Solving",
+          "importance_weight": 0.86,
+          "trend": "stable",
+          "min_proficiency": "Proficient",
+          "category": "Core CS"
+        }
+      ],
+      "micro_credentials": [
+        {
+          "code": "MC-DE-01",
+          "title": "High-Throughput Data Pipeline Engineering",
+          "target_skill": "SQL",
+          "estimated_hours": 16,
+          "badge_icon": "database",
+          "learning_outcomes": [
+            "Design scalable batch and streaming ETL architectures",
+            "Apply advanced window functions and analytical query optimizations",
+            "Implement data validation, deduplication, and schema enforcement"
+          ],
+          "modules": [
+            {
+              "title": "Batch & Stream Data Processing Fundamentals",
+              "hours": 4
+            },
+            {
+              "title": "Advanced SQL Analytic Functions & Partitioning",
+              "hours": 4
+            },
+            {
+              "title": "Data Cleansing, Validation & Idempotency",
+              "hours": 4
+            },
+            {
+              "title": "Hands-on Capstone: Automated Analytics Data Mart",
+              "hours": 4
+            }
+          ]
+        }
+      ],
+      "sample_postings": [
+        "Data Engineer sought to design and optimize high-volume SQL queries, data warehousing schemas, Python data transforms, and cloud storage lakes.",
+        "Hiring Data Platform Specialist with expertise in relational databases, indexing, ETL automation, algorithmic efficiency, and distributed storage."
+      ]
+    },
+    {
+      "role_id": "data-analyst",
+      "role_title": "Data Analyst",
+      "domain": "Data Analytics & Business Intelligence",
+      "market_demand_index": 92,
+      "demand_status": "Surging",
+      "average_salary_usd": "$95,000",
+      "description": "Analyzes complex enterprise datasets, extracts actionable statistical insights, builds automated dashboards, and translates data trends into strategic business decisions.",
+      "required_skills": [
+        {
+          "name": "Advanced SQL",
+          "importance_weight": 0.95,
+          "trend": "surging",
+          "min_proficiency": "Advanced",
+          "category": "Database / Querying"
+        },
+        {
+          "name": "Statistics",
+          "importance_weight": 0.93,
+          "trend": "high",
+          "min_proficiency": "Intermediate",
+          "category": "Mathematics & Modeling"
+        },
+        {
+          "name": "Python for Data Analysis",
+          "importance_weight": 0.92,
+          "trend": "surging",
+          "min_proficiency": "Intermediate",
+          "category": "Programming & Scripting"
+        },
+        {
+          "name": "Pandas",
+          "importance_weight": 0.90,
+          "trend": "surging",
+          "min_proficiency": "Intermediate",
+          "category": "Data Wrangling & Manipulation"
+        },
+        {
+          "name": "Data Visualization",
+          "importance_weight": 0.88,
+          "trend": "high",
+          "min_proficiency": "Intermediate",
+          "category": "Visual Analytics"
+        },
+        {
+          "name": "Power BI",
+          "importance_weight": 0.85,
+          "trend": "surging",
+          "min_proficiency": "Intermediate",
+          "category": "Business Intelligence Tools"
+        }
+      ],
+      "micro_credentials": [
+        {
+          "code": "MC-DA-01",
+          "title": "Business Intelligence & Automated Analytics",
+          "target_skill": "Power BI",
+          "estimated_hours": 14,
+          "badge_icon": "chart-bar",
+          "learning_outcomes": [
+            "Build interactive Power BI dashboards with drill-down capabilities",
+            "Model star schemas and implement DAX calculations",
+            "Automate executive reporting workflows"
+          ],
+          "modules": [
+            {
+              "title": "Power BI Data Ingestion & Power Query",
+              "hours": 4
+            },
+            {
+              "title": "DAX Expressions & Calculated Measures",
+              "hours": 5
+            },
+            {
+              "title": "Hands-on Capstone: Executive Performance Dashboard",
+              "hours": 5
+            }
+          ]
+        }
+      ],
+      "sample_postings": [
+        "Seeking Data Analyst proficient in Advanced SQL window functions, statistical data exploration, Python data analysis, Pandas manipulation, and Power BI dashboards."
+      ]
+    }
+  ]
+}

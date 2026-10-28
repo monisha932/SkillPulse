@@ -1,0 +1,68 @@
+[
+  {
+    "job_title": "Full Stack Cloud Application Engineer",
+    "target_role_id": "fullstack-dev",
+    "company": "Figma",
+    "industry": "Design & Collaboration",
+    "location": "San Francisco CA",
+    "required_skills": ["JavaScript", "React", "TypeScript", "REST API", "SQL", "Git", "HTML/CSS"],
+    "experience_level": "Senior",
+    "posting_date": "2026-03-08",
+    "data_source": "Curated Tech Dataset 2026"
+  },
+  {
+    "job_title": "Full Stack Software Developer",
+    "target_role_id": "fullstack-dev",
+    "company": "Canva",
+    "industry": "Design & Tech",
+    "location": "Remote",
+    "required_skills": ["JavaScript", "React", "Java", "SQL", "Git", "REST API", "HTML/CSS"],
+    "experience_level": "Mid Level",
+    "posting_date": "2026-03-09",
+    "data_source": "Curated Tech Dataset 2026"
+  },
+  {
+    "job_title": "Associate Web Developer",
+    "target_role_id": "fullstack-dev",
+    "company": "Notion",
+    "industry": "Productivity SaaS",
+    "location": "New York NY",
+    "required_skills": ["JavaScript", "React", "HTML/CSS", "SQL", "Git", "REST API"],
+    "experience_level": "Entry Level",
+    "posting_date": "2026-03-10",
+    "data_source": "Curated Tech Dataset 2026"
+  },
+  {
+    "job_title": "AI Research Scientist",
+    "target_role_id": "ai-ml-engineer",
+    "company": "Meta AI",
+    "industry": "Artificial Intelligence",
+    "location": "Menlo Park CA",
+    "required_skills": ["Python", "PyTorch", "Deep Learning", "Machine Learning", "Algorithms", "Git"],
+    "experience_level": "Senior",
+    "posting_date": "2026-03-07",
+    "data_source": "Curated Tech Dataset 2026"
+  },
+  {
+    "job_title": "Senior Cloud Infrastructure Engineer",
+    "target_role_id": "cloud-devops-eng",
+    "company": "Cloudflare",
+    "industry": "Internet Security & Cloud",
+    "location": "San Francisco CA",
+    "required_skills": ["Linux", "Docker", "Kubernetes", "Terraform", "CI/CD", "Python", "Git"],
+    "experience_level": "Senior",
+    "posting_date": "2026-03-08",
+    "data_source": "Curated Tech Dataset 2026"
+  },
+  {
+    "job_title": "Big Data Platform Engineer",
+    "target_role_id": "data-engineer",
+    "company": "Airbnb",
+    "industry": "Travel & Tech",
+    "location": "Remote",
+    "required_skills": ["Python", "SQL", "Apache Spark", "Airflow", "Kafka", "Data Modeling", "Git"],
+    "experience_level": "Senior",
+    "posting_date": "2026-03-09",
+    "data_source": "Curated Tech Dataset 2026"
+  }
+]

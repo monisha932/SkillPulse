@@ -1,0 +1,475 @@
+/* ==========================================================================
+   Assessment Subsystem Stylesheet - Professional Ed-Tech Standards
+   Prioritizing: Question Visibility, Timer, Navigation Matrix, Code Editor,
+   and Clear Submission Controls with calm, non-distracting interactions.
+   ========================================================================== */
+
+.assessment-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 1. Sticky Proctored Assessment Top Bar */
+.assessment-topbar {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 0.9rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
+  position: sticky;
+  top: 65px;
+  z-index: 45;
+}
+
+.assessment-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* 90-Minute High-Contrast Digital Countdown Timer */
+.timer-box {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 1.15rem;
+  background: #040814;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.15);
+  transition: border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timer-box.timer-warning {
+  color: #f59e0b;
+  border-color: #f59e0b;
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.25);
+}
+
+.timer-box.timer-critical {
+  color: #ef4444;
+  border-color: #ef4444;
+  box-shadow: 0 0 22px rgba(239, 68, 68, 0.35);
+}
+
+/* Anti-Cheating Integrity Monitor */
+.integrity-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  color: #fca5a5;
+  font-weight: 600;
+}
+
+.integrity-indicator.clean {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+}
+
+/* Submission Controls & Counter Pill */
+.assessment-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.progress-pill {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+.progress-pill b {
+  color: #ffffff;
+  font-family: var(--font-mono);
+}
+
+.btn-submit-assessment {
+  font-weight: 700;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.92rem;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+}
+
+/* 2. Two-Column Proctored Assessment Layout */
+.assessment-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .assessment-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 3. Left Column: 52-Question Matrix Navigator */
+.question-nav-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 145px;
+}
+
+.nav-matrix-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-filter-tabs {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 0.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.nav-tab-btn {
+  flex: 1;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.nav-tab-btn:hover {
+  color: #ffffff;
+}
+
+.nav-tab-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+/* 52-Question Matrix Grid */
+.question-matrix {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.55rem;
+  max-height: 430px;
+  overflow-y: auto;
+  padding-right: 0.35rem;
+}
+
+.matrix-btn {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.matrix-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.matrix-btn.active {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.15);
+  font-weight: 700;
+}
+
+.matrix-btn.answered {
+  background: rgba(16, 185, 129, 0.22);
+  border-color: var(--success);
+  color: #a7f3d0;
+}
+
+.matrix-btn.coding {
+  background: rgba(139, 92, 246, 0.18);
+  border-color: var(--accent);
+  color: #c4b5fd;
+}
+
+.matrix-btn.coding.answered {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: var(--success);
+  color: #6ee7b7;
+}
+
+.matrix-btn.flagged::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--warning);
+  box-shadow: 0 0 6px var(--warning);
+}
+
+/* 4. Right Column: Question Detail & Options */
+.question-detail-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  box-shadow: var(--shadow-md);
+  user-select: none;
+}
+
+.q-header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.q-domain-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Prioritized High-Contrast Question Visibility */
+.q-text {
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.65;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.q-text code {
+  background: #040814;
+  color: #38bdf8;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+}
+
+/* MCQ Options Deck */
+.mcq-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  margin-bottom: 2.25rem;
+}
+
+.mcq-option-card {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 1.15rem 1.4rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcq-option-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.mcq-option-card.selected {
+  background: rgba(99, 102, 241, 0.18);
+  border-color: var(--primary);
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.35);
+}
+
+.mcq-key-pill {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.mcq-option-card.selected .mcq-key-pill {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+.mcq-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f1f5f9;
+  line-height: 1.55;
+  flex: 1;
+}
+
+/* 5. Coding Challenge Sandboxed IDE Area */
+.coding-ide-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin-bottom: 2.25rem;
+  user-select: text;
+}
+
+.problem-statement-box {
+  background: rgba(9, 14, 26, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+}
+
+.code-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #090e1c;
+  border: 1px solid var(--border-subtle);
+  border-bottom: none;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  padding: 0.75rem 1.15rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.code-editor-textarea {
+  width: 100%;
+  height: 290px;
+  background: #040711;
+  color: #7dd3fc;
+  font-family: var(--font-mono);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  border: 1px solid var(--border-subtle);
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  padding: 1.15rem;
+  outline: none;
+  resize: vertical;
+  tab-size: 4;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.code-editor-textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 18px var(--primary-glow);
+}
+
+.code-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.test-cases-output-panel {
+  background: #020617;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  margin-top: 0.85rem;
+}
+
+.test-case-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  font-size: 0.84rem;
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.test-case-item.pass {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.test-case-item.fail {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* 6. Question Action Footer Navigation */
+.q-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
